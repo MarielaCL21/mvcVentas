@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask,request,render_template
 
 from controllers import usuario_controller,cliente_controller,producto_controller,venta_controller
 from database import db
@@ -22,7 +22,11 @@ def inject_activate_path():
 
 @app.route("/")
 def home():
-    return "<h1>Aplicacion ventas</h1>"
+        # return "<h1>Aplicacion ventas</h1>"
+         return render_template("base.html")
+
+
+   
 
 
 if __name__=="__main__":

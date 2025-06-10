@@ -56,7 +56,7 @@ def edit(id):
 
 @venta_bp.route("/delete/<int:id>")
 def delete(id):
-    venta = venta.get_by_id(id)
+    venta = Venta.get_by_id(id)
     venta.delete()
     return redirect(url_for('venta.index'))
     
